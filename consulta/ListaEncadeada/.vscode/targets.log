@@ -1,0 +1,402 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon Oct 25 17:12:05 2021
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+SSH_AGENT_LAUNCHER = gnome-keyring
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-94650ad6-ecf7-46d3-99c8-53d6bc162d01.sock
+# environment
+VSCODE_CWD = /home/vinicius
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/78/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# makefile (from 'Makefile', line 6)
+BINARY = main
+# default
+.VARIABLES := 
+# environment
+PWD = /home/vinicius/Área de Trabalho/Algoritmos e estrutura de dados/Aulas/Aula 9 - lista encadeada/ListaEncadeada
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/vinicius/.config/Code/CachedData/6cba118ac49a1b88332f312a8f67186f7f3c1643
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.OZMYB1
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=9eeed6356871f65934c6445061770554
+# makefile
+CURDIR := /home/vinicius/Área de Trabalho/Algoritmos e estrutura de dados/Aulas/Aula 9 - lista encadeada/ListaEncadeada
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+WAYLAND_DISPLAY = wayland-0
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=f9894224-bf29-4cc1-965c-be84ce683032&iid=f9894224-bf29-4cc1-965c-be84ce683032&sid=f9894224-bf29-4cc1-965c-be84ce683032","uploadToServer":true}
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# environment
+SNAP_REEXEC = 
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 2726
+# environment
+XDG_SESSION_TYPE = wayland
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# makefile (from 'Makefile', line 1)
+ITEM = Item/Item.c
+# environment
+SESSION_MANAGER = local/big:@/tmp/.ICE-unix/1710,unix/big:/tmp/.ICE-unix/1710
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=9eeed6356871f65934c6445061770554
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"pt-br","availableLanguages":{"*":"pt-br"},"_languagePackId":"6ea46340c3154fe0fe6192383ce27dbf.pt-br","_translationsConfigFile":"/home/vinicius/.config/Code/clp/6ea46340c3154fe0fe6192383ce27dbf.pt-br/tcf.json","_cacheRoot":"/home/vinicius/.config/Code/clp/6ea46340c3154fe0fe6192383ce27dbf.pt-br","_resolvedLanguagePackCoreLocation":"/home/vinicius/.config/Code/clp/6ea46340c3154fe0fe6192383ce27dbf.pt-br/6cba118ac49a1b88332f312a8f67186f7f3c1643","_corruptedFile":"/home/vinicius/.config/Code/clp/6ea46340c3154fe0fe6192383ce27dbf.pt-br/corrupted.info","_languagePackSupport":true}
+# environment
+BREAKPAD_DUMP_LOCATION = /home/vinicius/.config/Code/exthost Crash Reports
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# makefile (from 'Makefile', line 3)
+UTIL = Util/Util.c
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# environment
+IM_CONFIG_CHECK_ENV = 1
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+SNAP_COOKIE = dVf512fP4VFPKU7RzcB4C9JM8boSs6E6XRTy5DXS64M0gbVjq_xX
+# environment
+PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = pt_BR:pt:en
+# automatic
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 5)
+LISTA = Lista/ListaSequencial.c
+# environment
+SNAP_USER_COMMON = /home/vinicius/snap/code/common
+# environment
+SNAP = /snap/code/78
+# makefile (from 'Makefile', line 2)
+MAIN = Main.c
+# environment
+INVOCATION_ID = ea6a72ec55eb4e8f8aa60bd5f66b8908
+# environment
+SNAP_REVISION = 78
+# environment
+SNAP_REAL_HOME = /home/vinicius
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = vinicius
+# environment
+GNOME_SETUP_DISPLAY = :1
+# makefile (from 'Makefile', line 4)
+PILHA = Pilha/PilhaEncadeada.c
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 7)
+NAME = TAD
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+LS_COLORS = 
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = ubuntu
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = vinicius
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+SNAP_ARCH = amd64
+# makefile
+.DEFAULT_GOAL := all
+# environment
+DISPLAY = :0
+# environment
+USER = vinicius
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+DISABLE_WAYLAND = 1
+# environment
+SNAP_DATA = /var/snap/code/78
+# environment
+SNAP_CONTEXT = dVf512fP4VFPKU7RzcB4C9JM8boSs6E6XRTy5DXS64M0gbVjq_xX
+# environment
+MANAGERPID = 1548
+# environment
+DBUS_STARTER_BUS_TYPE = session
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 9253
+# environment
+_ = /snap/code/78/usr/share/code/code
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/vinicius/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+JOURNAL_STREAM = 8:31317
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/vinicius
+# environment
+QT_IM_MODULE = ibus
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-75d2c630-1.61.2-main.sock
+# environment
+SNAP_NAME = code
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/78/usr/share/glib-2.0/schemas
+# environment
+IM_CONFIG_PHASE = 1
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# environment
+SNAP_VERSION = 6cba118a
+# default
+SUFFIXES := 
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_COMMON = /var/snap/code/common
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+SNAP_USER_DATA = /home/vinicius/snap/code/78
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+GDMSESSION = ubuntu
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# variable set hash-table stats:
+# Load=132/1024=13%, Rehash=0, Collisions=8/168=5%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+ 
+
+# . (device 2051, inode 18744743): 10 files, no impossibilities.
+
+# 10 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+objlib:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 25):
+	gcc -Wall -pedantic -Werror -Wextra -c -fPIC $(UTIL) $(ITEM)
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-10-18 18:12:20
+#  File has been updated.
+#  Successfully updated.
+
+lib:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 28):
+	ar -rcs lib_util.a *.o
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 22):
+	@rm *.o
+
+valgrind:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 16):
+	valgrind --tool=memcheck --leak-check=full  --track-origins=yes --show-leak-kinds=all --show-reachable=yes ./$(BINARY)
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all:
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/14=14%
+#  recipe to execute (from 'Makefile', line 10):
+	gcc -Wall -g $(LISTA) $(MAIN) -L. -l_util -o $(BINARY)
+
+run:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 13):
+	./$(BINARY)
+
+zip:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 19):
+	@zip -r $(NAME).zip *
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=10/1024=1%, Rehash=0, Collisions=0/22=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 21 / storage = 145 B / avg = 6 B
+# current buf: size = 8162 B / used = 145 B / count = 21 / avg = 6 B
+
+# strcache performance: lookups = 34 / hit rate = 38%
+# hash-table stats:
+# Load=21/8192=0%, Rehash=0, Collisions=0/34=0%
+# Finished Make data base on Mon Oct 25 17:12:05 2021
+
+ 

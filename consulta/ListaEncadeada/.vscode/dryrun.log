@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/vinicius/Área de Trabalho/Algoritmos e estrutura de dados/Aulas/Aula 9 - lista encadeada/ListaEncadeada'
+gcc -Wall -g Lista/ListaSequencial.c Main.c -L. -l_util -o main
+make: Leaving directory '/home/vinicius/Área de Trabalho/Algoritmos e estrutura de dados/Aulas/Aula 9 - lista encadeada/ListaEncadeada'
+ 
