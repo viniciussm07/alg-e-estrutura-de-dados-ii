@@ -6,13 +6,9 @@
 struct item_st
 {
     int chave;
-    char nome[30];
-    char descricao[30];
-    int ataque;
-    int defesa;
 };
 
-ITEM *item_criar (int chave, const char *nome, const char *descricao, int ataque, int defesa)
+ITEM *item_criar (int chave)
 {
     ITEM *item;
 
@@ -21,10 +17,6 @@ ITEM *item_criar (int chave, const char *nome, const char *descricao, int ataque
     if (item != NULL)
     {
         item->chave = chave;
-        strcpy(item->nome, nome);
-        item->ataque = ataque;
-        item->defesa = defesa;
-        strcpy(item->descricao, descricao);
         return item;
     }
     return NULL;
@@ -33,12 +25,9 @@ ITEM *item_criar (int chave, const char *nome, const char *descricao, int ataque
 ITEM *item_ler_std_in()
 {
     ITEM item;
+
     scanf("%d", &(item.chave));
-    scanf(" %[^(\r|\n)]*c", item.nome);
-    scanf(" %[^(\r|\n)]*c", item.descricao);
-    scanf("%d", &(item.ataque));
-    scanf("%d", &(item.defesa));
-    return item_criar(item.chave, item.nome, item.descricao, item.ataque, item.defesa);
+    return item_criar(item.chave);
 }
 
 boolean item_apagar(ITEM **item)
@@ -77,11 +66,7 @@ void item_imprimir(const ITEM *item)
 {
     if (item != NULL)
     {
-        printf("\n-->chave: %d", item->chave);
-        printf("\n-->nome: %s__", item->nome);
-        printf("\n-->descricao: %s__", item->descricao);
-        printf("\n-->ataque: %d", item->ataque);
-        printf("\n-->defesa: %d\n", item->defesa);
+        printf("%d", item->chave);
     }
 }
 

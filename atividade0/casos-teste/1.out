@@ -1,0 +1,4 @@
+Head -> Data: 20, Next: 25
+Node 1 -> Previous: 20, Data: 25, Next: 15
+Node 2 -> Previous: 25, Data: 15, Next: 30
+Node 3 -> Previous: 15, Data: 30

@@ -1,0 +1,13 @@
+Head -> Data: 9, Next: 7
+Node 1 -> Previous: 9, Data: 7, Next: 5
+Node 2 -> Previous: 7, Data: 5, Next: 250
+Node 3 -> Previous: 5, Data: 250, Next: 3
+Node 4 -> Previous: 250, Data: 3, Next: 1
+Node 5 -> Previous: 3, Data: 1, Next: 500
+Node 6 -> Previous: 1, Data: 500, Next: 750
+Node 7 -> Previous: 500, Data: 750, Next: 2
+Node 8 -> Previous: 750, Data: 2, Next: 4
+Node 9 -> Previous: 2, Data: 4, Next: 6
+Node 10 -> Previous: 4, Data: 6, Next: 8
+Node 11 -> Previous: 6, Data: 8, Next: 10
+Node 12 -> Previous: 8, Data: 10

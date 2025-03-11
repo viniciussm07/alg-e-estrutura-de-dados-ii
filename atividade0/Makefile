@@ -1,13 +1,13 @@
 ITEM = Item/Item.c
-MAIN = Main.c
+MAIN = main.c
 UTIL = Util/Util.c
-PILHA = Pilha/PilhaEncadeada.c
-LISTA = Lista/ListaSequencial.c
+LISTA = Lista/ListaEncadeada.c
+INPUT = Input/Input.c
 BINARY = main
 NAME = TAD
 
 all:
-	gcc -Wall -g $(LISTA) $(MAIN) -L. -l_util -o $(BINARY)
+	gcc -Wall -g $(UTIL) $(ITEM) $(LISTA) $(INPUT) $(MAIN) -o $(BINARY)
 
 run:
 	./$(BINARY)

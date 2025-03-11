@@ -7,7 +7,7 @@
 
 typedef struct item_st ITEM;
 
-ITEM *item_criar (int chave, const char *nome, const char *descricao, int ataque, int defesa);
+ITEM *item_criar (int chave);
 ITEM *item_ler_std_in();
 boolean item_apagar(ITEM **item);
 void item_imprimir(const ITEM *item);
