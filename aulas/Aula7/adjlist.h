@@ -18,7 +18,7 @@ struct graph
 {
     int V;
     int A;
-    Node *node;
+    Node *adj; // Alterado de node para adj
 };
 
 typedef struct graph *Digraph;
@@ -29,11 +29,11 @@ Graph initGraph(int V)
     Graph G = (Graph)malloc(sizeof(*G));
     G->V = V;
     G->A = 0;
-    G->node = (Node *)malloc(V * sizeof(Node *));
+    G->adj = (Node *)malloc(V * sizeof(Node *)); // Alterado de node para adj
 
     for (int i = 0; i < V; i++)
     {
-        G->node[i] = NULL;
+        G->adj[i] = NULL; // Alterado de node para adj
     }
     return G;
 }
@@ -49,8 +49,8 @@ Node newArc(Vertex w, int weight) // Adicionado parâmetro weight
 
 void insertArc(Graph G, Vertex v, Vertex w, int weight) // Adicionado parâmetro weight
 {
-    Node last = G->node[v];
-    for (Node v_node = G->node[v]; v_node != NULL; v_node = v_node->next)
+    Node last = G->adj[v]; // Alterado de node para adj
+    for (Node v_node = G->adj[v]; v_node != NULL; v_node = v_node->next) // Alterado de node para adj
     {
         last = v_node;
         if (v_node->value == w)
@@ -58,9 +58,9 @@ void insertArc(Graph G, Vertex v, Vertex w, int weight) // Adicionado parâmetro
             return;
         }
     }
-    if (G->node[v] == NULL)
+    if (G->adj[v] == NULL) // Alterado de node para adj
     {
-        G->node[v] = newArc(w, weight); // Passa o peso ao criar o arco
+        G->adj[v] = newArc(w, weight); // Passa o peso ao criar o arco
     }
     else
     {
@@ -71,19 +71,19 @@ void insertArc(Graph G, Vertex v, Vertex w, int weight) // Adicionado parâmetro
 
 void removeArc(Graph G, Vertex v, Vertex w)
 {
-    if (G->node[v] == NULL)
+    if (G->adj[v] == NULL) // Alterado de node para adj
     { // não existe arco saindo de v
         return;
     }
-    Node aux = G->node[v]; // auxiliar começa no primeiro nó
-    for (Node rem = G->node[v]; rem != NULL; rem = rem->next)
+    Node aux = G->adj[v]; // Alterado de node para adj
+    for (Node rem = G->adj[v]; rem != NULL; rem = rem->next) // Alterado de node para adj
     {
         if (rem->value == w)
         { // se o primeiro da lista
             G->A--;
-            if (G->node[v] == rem)
+            if (G->adj[v] == rem) // Alterado de node para adj
             {
-                G->node[v] = rem->next;
+                G->adj[v] = rem->next; // Alterado de node para adj
                 return;
             }
             aux->next = rem->next; // recebe o ponteiro do próximo
@@ -114,9 +114,9 @@ void destroyGraph(Graph G)
     {
         for (int i = 0; i < G->V; i++)
         {
-            free(G->node[i]);
+            free(G->adj[i]); // Alterado de node para adj
         }
-        free(G->node);
+        free(G->adj); // Alterado de node para adj
         free(G);
     }
 }
@@ -127,7 +127,7 @@ void printGraph(Graph G)
     for (int i = 0; i < G->V; i++)
     {
         printf("Vertice %d", i);
-        for (Node print = G->node[i]; print != NULL; print = print->next)
+        for (Node print = G->adj[i]; print != NULL; print = print->next) // Alterado de node para adj
         {
             printf("  -> %d (peso: %d)", print->value, print->weight); // Exibe o peso
         }
@@ -139,18 +139,21 @@ void clearVisited(Graph G)
 {
     for (int i = 0; i < G->V; i++)
     {
-        G->node[i]->visited = false;
+        if (G->adj[i] != NULL) // Alterado de node para adj
+        {
+            G->adj[i]->visited = false; // Alterado de node para adj
+        }
     }
 }
 
 void DFS(Graph G, Vertex v)
 {
-    G->node[v]->visited = true;
+    G->adj[v]->visited = true; // Alterado de node para adj
     printf("visited: %d \n", v);
-    for (Node p = G->node[v]; p != NULL; p = p->next)
+    for (Node p = G->adj[v]; p != NULL; p = p->next) // Alterado de node para adj
     {
         int y = p->value;
-        if (!G->node[y]->visited)
+        if (!G->adj[y]->visited) // Alterado de node para adj
         {
             DFS(G, y);
         }
@@ -173,14 +176,14 @@ void BFS(Graph G, Vertex x)
     while (start != end)
     {
         Vertex element = queue[start++];
-        if (!G->node[element]->visited)
+        if (!G->adj[element]->visited) // Alterado de node para adj
         {
-            G->node[element]->visited = true;
+            G->adj[element]->visited = true; // Alterado de node para adj
             printf("visited %d \n", element);
-            for (Node p = G->node[element]; p != NULL; p = p->next)
+            for (Node p = G->adj[element]; p != NULL; p = p->next) // Alterado de node para adj
             {
                 Vertex w = p->value;
-                if (!G->node[w]->visited)
+                if (!G->adj[w]->visited) // Alterado de node para adj
                 {
                     queue[end++] = w;
                 }
@@ -201,7 +204,7 @@ Graph copyGraph(Graph G)
     Graph C = initGraph(G->V);
     for (int i = 0; i < G->V; i++)
     {
-        for (Node p = G->node[i]; p != NULL; p = p->next)
+        for (Node p = G->adj[i]; p != NULL; p = p->next) // Alterado de node para adj
         {
             insertEdge(C, i, p->value, p->weight);
         }
@@ -211,11 +214,11 @@ Graph copyGraph(Graph G)
 
 int path(Graph C, Vertex v, int *stack, int *index)
 {
-    while (C->node[v] != NULL)
+    while (C->adj[v] != NULL) // Alterado de node para adj
     {
         (*index)++;
         stack[*index] = v;
-        Vertex w = C->node[v]->value;
+        Vertex w = C->adj[v]->value; // Alterado de node para adj
         removeEdge(C, v, w);
         v = w;
     }
@@ -245,7 +248,7 @@ void checkEulerPath(Graph G)
     int n_odds = 0;
     for (int i = 0; i < G->V; i++)
     {
-        for (Node p = G->node[i]; p != NULL; p = p->next)
+        for (Node p = G->adj[i]; p != NULL; p = p->next) // Alterado de node para adj
         {
             degree[i]++;
         }
@@ -287,16 +290,19 @@ bool hamiltonPath(Graph G, Vertex start, Vertex end, int n)
             return false;
         }
     }
-    G->node[start]->visited = true;
-    for(Node p = G->node[start]; p != NULL; p = p->next){
-        if(!(G->node[p->value]->visited) || p->value == end){
-            if (hamiltonPath(G, p->value, end, n + 1)){
+    G->adj[start]->visited = true; // Alterado de node para adj
+    for (Node p = G->adj[start]; p != NULL; p = p->next) // Alterado de node para adj
+    {
+        if (!(G->adj[p->value]->visited) || p->value == end) // Alterado de node para adj
+        {
+            if (hamiltonPath(G, p->value, end, n + 1))
+            {
                 printf("| %d -> %d ", start, p->value);
                 return true;
-            } 
+            }
         }
     }
-    G->node[start]->visited = false;
+    G->adj[start]->visited = false; // Alterado de node para adj
     return false;
 }
 
@@ -304,7 +310,8 @@ bool checkHamilton(Graph G, Vertex start, Vertex end)
 {
     clearVisited(G);
     printf("\nHamilton Path: \n");
-    if(hamiltonPath(G, start, end, 0)){
+    if (hamiltonPath(G, start, end, 0))
+    {
         printf("\n");
         return true;
     }
